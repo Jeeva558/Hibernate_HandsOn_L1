@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>    
+<!DOCTYPE hibernate-mapping PUBLIC    
+          "-//Hibernate/Hibernate Mapping DTD 5.3//EN"    
+          "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">    
+              
+<hibernate-mapping package="topic4.assignment3">    
+  
+  <class name="Student" table="student">  
+        <id name="student_id" type="int">  
+            <column name="student_id" />  
+            <generator class="increment" />  
+        </id>  
+        <property name="student_name" />  
+  
+        <list name="course" table="stu_cou" fetch="select" cascade="all">  
+            <key column="student_id" />  
+               <index column="type"></index>   
+            <many-to-many class="topic4.assignment3.Course" column="course_id" />  
+        </list>  
+    </class>   
+    <class name="Course" table="course">  
+        <id name="course_id" type="int">  
+            <column name="course_id" />  
+            <generator class="increment" />  
+        </id>  
+        <property name="course_name"  />  
+        <property name="course_amount" />  
+    </class>  
+</hibernate-mapping>      

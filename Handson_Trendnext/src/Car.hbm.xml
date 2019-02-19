@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 14, 2019 3:59:34 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="topic5.Car" table="CAR">
+        <id name="RegNo" type="java.lang.String">
+            <column name="REGNO" />
+            <generator class="assigned" />
+        </id>
+        <property name="Model" type="java.lang.String">
+            <column name="MODEL" />
+        </property>
+        <property name="Color" type="java.lang.String">
+            <column name="COLOR" />
+        </property>
+        <property name="Manufacturer" type="java.lang.String">
+            <column name="MANUFACTURER" />
+        </property>
+        <property name="Price" type="int">
+            <column name="PRICE" />
+        </property>
+    </class>
+</hibernate-mapping>

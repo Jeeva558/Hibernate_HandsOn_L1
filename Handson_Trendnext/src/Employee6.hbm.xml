@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+  
+  "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+  "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+  
+  
+  <hibernate-mapping package="topic6">  
+  <class name="Employee" table="Employee6">  
+  <id name="id">  
+  <generator class="increment"></generator>  
+  </id>  
+  
+  <property name="employeeID"></property>
+  <property name="employeeName"></property>
+  <property name="employeeSalary"></property>  
+  
+  <joined-subclass name="RegularEmployee" table="RegularEmployee">  
+  <key column="eid"></key>  
+  <property name="qplc"></property>      
+  </joined-subclass>  
+   
+  <joined-subclass name="ContractEmployee" table="ContractEmployee">  
+  <key column="eid"></key>  
+  <property name="allowance"></property>      
+  </joined-subclass>  
+  
+  </class>  
+  </hibernate-mapping>

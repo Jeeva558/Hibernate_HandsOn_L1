@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 15, 2019 4:29:58 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="topic3.assignment3.Album" table="ALBUM">
+        <id name="albumid" type="int">
+            <column name="ALBUMID" />
+            <generator class="native" />
+        </id>
+        <property name="aname" type="java.lang.String">
+            <column name="ANAME" />
+        </property>
+        <map name="photos" table="ALBUM" lazy="true">
+            <key>
+                <column name="ALBUMID" />
+            </key>
+            <map-key type="java.lang.String"></map-key>
+            <element type="java.lang.String">
+                <column name="PHOTOS" />
+            </element>
+        </map>
+    </class>
+</hibernate-mapping>

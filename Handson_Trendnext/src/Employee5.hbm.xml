@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 13, 2019 4:16:29 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="topic4.assignment2.Employee" table="EMPLOYEE5">
+        <id name="Employee_ID" type="int">
+            <column name="Employee_ID" />
+            
+        </id>
+        <property name="Employee_name" type="java.lang.String">
+            <column name="Employee_name" />
+        </property>
+        <one-to-one name="pass" class="topic4.assignment2.Passport" cascade="all"></one-to-one>
+    </class>
+</hibernate-mapping>

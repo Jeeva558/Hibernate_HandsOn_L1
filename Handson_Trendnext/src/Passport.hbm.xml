@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 13, 2019 4:16:29 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="topic4.assignment2.Passport" table="PASSPORT">
+        <id name = "id" type = "int" >
+        <column name="id" />
+         <generator class="foreign">
+				<param name="property">employee</param>
+			</generator>
+      </id>
+        <property name="passport_number" type="int">
+            <column name="passport_number" />
+        </property>
+        <property name="DOB" type="java.util.Date">
+            <column name="DOB" />
+        </property>
+        
+            
+        
+        <one-to-one name="employee" class="topic4.assignment2.Employee"></one-to-one>
+    </class>
+</hibernate-mapping>

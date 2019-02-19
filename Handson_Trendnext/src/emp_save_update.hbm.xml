@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+  
+ <hibernate-mapping package="topic2.assignment1">  
+  <class name="Employee2" table="employee2">  
+     
+            
+    <id name="EmployeeID"></id>  
+    <property name="EmployeeName"></property>
+     <property name="EmployeeBand"></property>  
+            
+  </class>  
+            
+ </hibernate-mapping> 

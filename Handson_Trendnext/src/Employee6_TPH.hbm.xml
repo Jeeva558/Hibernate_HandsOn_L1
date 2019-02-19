@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+  
+<hibernate-mapping package="topic6">  
+<class name="Employee" table="emp121" discriminator-value="emp">  
+<id name="id">  
+<generator class="increment"></generator>  
+</id>  
+  
+<discriminator column="type" type="string"></discriminator>  
+<property name="employeeID"></property>
+  <property name="employeeName"></property>
+  <property name="employeeSalary"></property>  
+            
+<subclass name="RegularEmployee" discriminator-value="reg_emp">  
+<property name="qplc"></property>  
+</subclass>  
+            
+<subclass name="ContractEmployee" discriminator-value="con_emp">  
+<property name="allowance"></property>  
+</subclass>  
+            
+</class>  
+            
+</hibernate-mapping> 
